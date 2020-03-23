@@ -18,7 +18,7 @@ public class ConferencesLoader: ObservableObject {
         }
     }
 
-    func loadConferences(completion: @escaping (([Conference]) -> Void)) {
+    func loadConferences(completion: @escaping ([Conference]) -> Void) {
         URLSession.shared.dataTaskPublisher(for: url!)
                 .decode(type: [Conference].self, decoder: YAMLDecoder())
                 .receive(on: RunLoop.main)
