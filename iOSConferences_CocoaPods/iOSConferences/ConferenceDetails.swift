@@ -27,7 +27,7 @@ struct LinkButton: View {
         Button(action: {
             UIApplication.shared.open(URL(string: self.link)!)
         }) {
-            Text("Go to the website")
+            Text("Go to official website")
         }
     }
 }
