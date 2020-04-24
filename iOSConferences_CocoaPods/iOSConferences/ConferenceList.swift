@@ -19,7 +19,7 @@ struct ConferenceList: View {
                         Text(conference.location).font(.subheadline)
                     }
                 }
-            }.navigationBarTitle("Conferences")
+            }.navigationBarTitle("Cocoa Conferences")
         }
     }
 }
