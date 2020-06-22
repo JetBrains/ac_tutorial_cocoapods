@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62E98063EDB645F4342B9B66 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 62E9860BE4AC076F78826AE3 /* .gitignore */; };
 		C1C4F13007141EC29CE85C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C4F50A7CB67F5CDD19348A /* AppDelegate.swift */; };
 		C1C4F46B5FB70FFCD2CBD48C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C4F993925F22EBA137E751 /* Preview Assets.xcassets */; };
 		C1C4F553AFA3657A0C0B774E /* ConferenceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C4F1BE5AB36A49619DA92B /* ConferenceDetails.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		276F0D090731F1032A0EAC25 /* Pods-iOSConferences.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSConferences.debug.xcconfig"; path = "Target Support Files/Pods-iOSConferences/Pods-iOSConferences.debug.xcconfig"; sourceTree = "<group>"; };
+		62E9860BE4AC076F78826AE3 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		C1C4F1BE5AB36A49619DA92B /* ConferenceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceDetails.swift; sourceTree = "<group>"; };
 		C1C4F50A7CB67F5CDD19348A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1C4F5CE1B94C4A903D52E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				C1C4FCF74412702643E83944 /* iOSConferences */,
 				B99B55973E34A1B6CF7B62FB /* Pods */,
 				B7D9A50EAE82064FA269C3B1 /* Frameworks */,
+				62E9860BE4AC076F78826AE3 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +188,7 @@
 				C1C4FD006289A2EB711F07B7 /* LaunchScreen.storyboard in Resources */,
 				C1C4F46B5FB70FFCD2CBD48C /* Preview Assets.xcassets in Resources */,
 				C1C4F99AC81544BFE4999B4D /* conferencesData.json in Resources */,
+				62E98063EDB645F4342B9B66 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
