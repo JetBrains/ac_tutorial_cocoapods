@@ -10,7 +10,6 @@
 		AC88A36027FC685789AB798C /* Pods_iOSConferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB3AACE06F5BEE066B81DD9 /* Pods_iOSConferences.framework */; };
 		C1C4F1E2CC42B5F5220A55A8 /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C4F33B6CC1A8A5246CDF3E /* Conference.swift */; };
 		C1C4F2063D8CE036986BB395 /* ConferenceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C4F8535B58C7CFD2EFCC71 /* ConferenceDetails.swift */; };
-		C1C4F60E32A01D44CCB4B55D /* conferencesData.json in Resources */ = {isa = PBXBuildFile; fileRef = C1C4FC56CD12F44190BF0C27 /* conferencesData.json */; };
 		C1C4F6F8E3035B2A7E8C8628 /* iOSConferencesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C4FF4B4AF54A1D278233B2 /* iOSConferencesApp.swift */; };
 		C1C4F793E99EB1710A2DFFAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C4F13793CB6BBC8D0067A1 /* Preview Assets.xcassets */; };
 		C1C4F8E020E32448A1E2200F /* ConferenceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C4F03E89938E48FDDDF0A3 /* ConferenceList.swift */; };
@@ -30,7 +29,6 @@
 		C1C4F4AFA0B3BACE28B1FD9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		C1C4F8535B58C7CFD2EFCC71 /* ConferenceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceDetails.swift; sourceTree = "<group>"; };
 		C1C4FBE6853C30B0650AE230 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		C1C4FC56CD12F44190BF0C27 /* conferencesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conferencesData.json; sourceTree = "<group>"; };
 		C1C4FF4B4AF54A1D278233B2 /* iOSConferencesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSConferencesApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,18 +63,9 @@
 				C1C4FF4B4AF54A1D278233B2 /* iOSConferencesApp.swift */,
 				C1C4F03E89938E48FDDDF0A3 /* ConferenceList.swift */,
 				C1C4FEC1C3479AFA7830945C /* Model */,
-				C1C4F8B3892B77FB70021802 /* Resources */,
 				C1C4F8535B58C7CFD2EFCC71 /* ConferenceDetails.swift */,
 			);
 			path = iOSConferences;
-			sourceTree = "<group>";
-		};
-		C1C4F8B3892B77FB70021802 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C1C4FC56CD12F44190BF0C27 /* conferencesData.json */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		C1C4FC2411A344B04D13ADF2 = {
@@ -173,7 +162,6 @@
 			files = (
 				C1C4FA6FD4BB17A3EB41DF5F /* Assets.xcassets in Resources */,
 				C1C4F793E99EB1710A2DFFAE /* Preview Assets.xcassets in Resources */,
-				C1C4F60E32A01D44CCB4B55D /* conferencesData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
