@@ -1,42 +1,10 @@
 //
-// Created by jsmith on 27.02.20.
-// Copyright (c) 2020 JetBrains. All rights reserved.
+// Created by jetbrains on 29.10.21.
 //
 
 import Foundation
 import Yams
 import Combine
-
-let url = URL(string: "https://raw.githubusercontent.com/Lascorbe/CocoaConferences/master/_data/conferences.yml")
-
-public class ConferencesLoader: ObservableObject {
-    @Published var conferences = [Conference]()
-    var result: AnyCancellable?
-
-    public init() {
-        loadConferences() { conferences in
-            self.conferences = conferences
-        }
-    }
-
-    func loadConferences(completion: @escaping ([Conference]) -> Void) {
-        result = URLSession.shared.dataTaskPublisher(for: url!)
-                                  .decode(type: [Conference].self, decoder: YAMLDecoder())
-                                  .receive(on: RunLoop.main)
-                                  .eraseToAnyPublisher()
-                                  .sink(receiveCompletion: { completion in
-                                      switch completion {
-                                      case .finished:
-                                          break
-                                      case .failure(let error):
-                                          print(error.localizedDescription)
-                                      }
-                                  }, receiveValue: { conferences in
-                                      completion(conferences)
-                                  })
-    }
-
-}
 
 extension Date {
     func dateToString() -> String {
@@ -46,11 +14,41 @@ extension Date {
     }
 }
 
+let url = URL(string: "https://raw.githubusercontent.com/Lascorbe/CocoaConferences/master/_data/conferences.yml")
 
-extension YAMLDecoder: TopLevelDecoder {
-    public func decode<T: Decodable>(_ type: T.Type, from data: Input) throws -> T {
-        try decode(type, from: String(data: data.data, encoding: .utf8)!)
+public class ConferencesLoader: ObservableObject {
+    @Published var conferences = [Conference]()
+    var result: AnyCancellable?
+
+    public init() {
+        loadConferences(completion: {
+            conferences in
+            self.conferences = conferences
+        })
     }
 
-    public typealias Input = URLSession.DataTaskPublisher.Output
+    func loadConferences(completion: @escaping ([Conference]) -> Void) {
+        result = URLSession.shared.dataTaskPublisher(for: url!)
+                // Make the DataTaskPublisher output equivalent to the YAMLDecoder input
+                .map {$0.data}
+                // Decode the remote YAML file
+                .decode(type: [Conference].self, decoder: YAMLDecoder())
+                // Specify a scheduler on which the current publisher will receive elements
+                .receive(on: RunLoop.main)
+                // Erase the publisher's actual type and convert it to AnyPublisher
+                .eraseToAnyPublisher()
+                // Attach a subscriber to the publisher.
+                // receiveCompletion: a close to execute on completion. Use it to handle errors.
+                // receiveValue: a closure to execute when receiving a value.
+                .sink(receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                        break
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }, receiveValue: { conferences in
+                    completion(conferences)
+                })
+    }
 }

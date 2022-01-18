@@ -6,5 +6,8 @@ project 'iOSConferences.xcodeproj'
 target 'iOSConferences' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Yams'
+
+  # Pods for iOSConferences
+  pod ('Yams')
+
 end

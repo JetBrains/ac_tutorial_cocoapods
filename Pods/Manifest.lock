@@ -1,5 +1,5 @@
 PODS:
-  - Yams (2.0.0)
+  - Yams (4.0.6)
 
 DEPENDENCIES:
   - Yams
@@ -9,8 +9,8 @@ SPEC REPOS:
     - Yams
 
 SPEC CHECKSUMS:
-  Yams: cb96472112d99e4b368f8dae9ab62e8a3eb8a3f9
+  Yams: ed1c49f0d6be84f305ad3f93f997b1df039afd9e
 
-PODFILE CHECKSUM: 1cc3efc9dcb0db19feaa984af38482dacee345e2
+PODFILE CHECKSUM: 4efcf3ef11c605477f07d435be7316bc6532c696
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.11.2
